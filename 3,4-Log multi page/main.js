@@ -1,6 +1,6 @@
 const http = require('http');
-const url = require('url');
-const pageData = require('../Modules/pageData');
+var url = require('url');
+const pageData = require('../Modules/pageData.js');
 const page = require('../Modules/pageHeader.js');
 
 
@@ -8,22 +8,28 @@ let server = http.createServer((req, res) => {
     console.log(`request was made: ${req.url}`);
     //header//
     if (req.method === 'GET') {
-        let pathname = url.parse(req.url).pathname;
+        var pathname = url.parse(req.url).pathname;
         switch (pathname) {
-            case '/team':
-                res.end(pageData.userTable);
+            case '/':
+                res.end(pageData.helloWebApplication);
                 break;
-            case 'css/userTableStyle.css':
-                res.end(pageData.userTableCss);
+            case '/css/style.css':
+                res.end(pageData.helloWorldCss);
                 break;
-            case 'js/CRUD.js':
-                res.end(pageData.userTableCRUD);
+            case '/root':
+                res.end(pageData.rootPage);
                 break;
-            case 'js/callData.js':
-                res.end(pageData.userTableCallData);
+            case '/json':
+                res.end(pageData.json);
                 break;
-            case 'js/GUI.js':
-                res.end(pageData.userTableGUI);
+            case '/about':
+                res.end(pageData.aboutMe);
+                break;
+            case '/content':
+                res.end(pageData.content);
+                break;
+            case '/helloWorld':
+                res.end(pageData.helloWorld);
                 break;
             //user put nothing in url//
             case '/css/404style.css':

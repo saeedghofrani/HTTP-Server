@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden !important; */
+}
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  background-color: #f2f2f2 !important;
+  overflow-x: hidden;
+}
+.cardUI {
+  transition: all 0.5s linear;
+}
+.cardUI:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.card:hover img {
+  animation: Grow 0.5s forwards;
+}
+.container-fluid.d-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+}
+
+.plusBottun {
+  border: 1px solid white;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  line-height: 60px;
+  vertical-align: middle;
+  padding-bottom: 10px;
+  padding-right: 8px;
+  transition: all 0.5s linear;
+}
+.plusBottun i {
+  border-radius: 50%;
+  font-weight: lighter;
+  font-size: 22px;
+  width: 10px;
+  height: 10px;
+  color: white;
+}
+.plusBottun:hover {
+  cursor: pointer;
+  box-shadow:
+  7px 7px 20px 0px rgba(0, 0, 0, 0.323),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.315),
+  7px 7px 20px 0px rgba(0, 0, 0, 0.364),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.295);
+  opacity: 0.7;
+}
+
+/* .plusBottun:hover {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+}
+.plusBottun:hover i {
+  padding-bottom: 14px;
+  font-size: 26px;
+} */
+h5.card-title {
+  overflow-y: hidden;
+}
+
+#navbarSupportedContent {
+  justify-content: right;
+}
+#openModal {
+  line-height: 37;
+  vertical-align: middle;
+}
+.modal-footer {
+  background-color: rgba(221, 221, 221, 0.679);
+}
+.modal-header {
+  background-color: rgba(221, 221, 221, 0.679);
+}
+.modalBtn {
+  width: 100px;
+}
+#removeModal {
+  background-color: rgb(202, 21, 21);
+  border: transparent;
+}
+#editModal {
+  background-color: rgba(14, 135, 3, 0.741);
+  border: transparent;
+}
+.modalBtn:hover {
+  opacity: 0.5;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+.firs-name {
+  width: fit-content !important;
+  margin: 6px;
+  height: 50px !important;
+  padding: 10px;
+  border: none;
+  transition: border 0.5s linear;
+  background-color: rgba(128, 128, 128, 0.289);
+}
+.firs-name:focus {
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.453);
+}
+.firs-name:hover {
+  color: black;
+}
+#idModal {
+  width: 380px !important;
+}
+#firstNameModal {
+  width: 308px !important;
+}
+#lastNameModal {
+  width: 310px !important;
+}
+#emailModal {
+  width: 350px !important;
+}
+#imgModal {
+  animation: none;
+}
+#imgModal:hover {
+  opacity: 0.9;
+}
+#userHeader:hover {
+  animation: shake 2s forwards;
+}
+@keyframes shake {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 25px;
+  }
+}
+
+.effect-shine:hover {
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgb(0, 0, 0) 30%,
+    #000 50%,
+    rgb(0, 0, 0) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.effect-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+span {
+  background-color: rgb(130, 130, 130) !important;
+  color: white !important;
+  transition: all 0.4s linear;
+}
+span:hover {
+  cursor: pointer;
+  box-shadow:
+  7px 7px 20px 0px rgba(0, 0, 0, 0.323),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.315),
+  7px 7px 20px 0px rgba(0, 0, 0, 0.364),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.295);
+}
+.modal-footer button:hover {  
+  box-shadow:
+  7px 7px 20px 0px rgba(0, 0, 0, 0.323),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.315),
+  7px 7px 20px 0px rgba(0, 0, 0, 0.364),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.295); 
+  opacity: 1 !important;
+}
+
+
+/*////////////////////////////////////////////////////////
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  border-radius: 10px;
+  text-align: center; /* Centered text */
+  box-shadow: 1px 1px 3px black, 1px 1px 3px black;
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 10; /* Add a z-index if needed */
+  right: 30px; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 4s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    right: 30px;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    right: 30px;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}
+
+
+
+.btn-outline-success {
+  color: #0D6EFD !important;
+  border-color: #0D6EFD !important;
+}
+.btn-outline-success:hover {
+  color: white !important;
+  background-color: #0D6EFD !important;
+}
+#searchBtn {
+  padding-right: 20px;
+  width: 67px !important; 
+}
