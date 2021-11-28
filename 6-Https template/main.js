@@ -10,7 +10,7 @@ let server = http.createServer((req, res) => {
     if (req.method === 'GET') {
         let pathname = url.parse(req.url).pathname;
         switch (pathname) {
-            case '/team':
+            case '/':
                 res.end(pageData.userTable);
                 break;
             case '/css/userTableStyle.css':

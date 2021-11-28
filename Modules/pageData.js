@@ -6,6 +6,8 @@ try {
     const notFoundCss = pageData('../page/Not Found/css/404style.css');
     const helloWebApplication = pageData('../page/Hello Web Application/page.html');
     const helloWebApplicationCss = pageData('../page/Hello Web Application/css/style.css');
+    const saeed = pageData('../page/Saeed/page.html');
+    const saeedCss = pageData('../page/Saeed/css/style.css');
     const aboutMe = pageData('../page/About Me/page.html');
     const aboutMeCss = pageData('../page/About Me/css/style.css');
     const content = pageData('../page/Content/page.html');
@@ -24,6 +26,8 @@ try {
         notFoundCss,
         helloWebApplication,
         helloWebApplicationCss,
+        saeed,
+        saeedCss,
         aboutMe,
         aboutMeCss,
         content,

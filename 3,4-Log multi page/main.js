@@ -16,12 +16,6 @@ let server = http.createServer((req, res) => {
             case '/css/style.css':
                 res.end(pageData.helloWorldCss);
                 break;
-            case '/root':
-                res.end(pageData.rootPage);
-                break;
-            case '/json':
-                res.end(pageData.json);
-                break;
             case '/about':
                 res.end(pageData.aboutMe);
                 break;
@@ -30,6 +24,9 @@ let server = http.createServer((req, res) => {
                 break;
             case '/helloWorld':
                 res.end(pageData.helloWorld);
+                break;
+            case '/me':
+                res.end(pageData.saeed);
                 break;
             //user put nothing in url//
             case '/css/404style.css':
