@@ -1,6 +1,8 @@
 "use strict";
 const pageData = require('./readPage.js');
+
 try {
+    // dictionary contain addresses and page
     const addressesDictinary = {
         '/root': pageData('../../page/root/index.html'),
         '/json': pageData('../../page/JSON/file.json'),
