@@ -1,4 +1,4 @@
-let pageData = require('./readPage.js');
+let pageData = require('../readPage.js');
 try {
     const rootPage = pageData('../page/root/index.html');
     const rootPageCss = pageData('../page/root/css/style.css')

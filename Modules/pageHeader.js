@@ -1,4 +1,5 @@
-let page = {
+"use strict";
+const page = {
     status: 200,
     port: 4000,
     hostname: 'localhost',
