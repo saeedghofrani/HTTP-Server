@@ -1,23 +1,26 @@
 const http = require('http');
-var url = require('url');
+const url = require('url');
 const pageData = require('../Modules/pageData.js');
 const page = require('../Modules/pageHeader.js');
-
+const address = require('../Modules/address.js');
 
 let server = http.createServer((req, res) => {
     console.log(`request was made: ${req.url}`);
     //header//
     if (req.method === 'GET') {
-        var pathname = url.parse(req.url).pathname;
+        let pathname = url.parse(req.url).pathname;
         switch (pathname) {
-            case '/root':
+            case address.root:
                 res.end(pageData.rootPage);
                 break;
-            case '/json':
+            case address.json:
                 res.end(pageData.json);
                 break;
+            case address.StyleCss:
+                res.end(pageData.rootPageCss);
+                break;
             //user put nothing in url//
-            case '/css/404style.css':
+            case address.style404:
                 res.end(pageData.notFoundCss);
                 break;
             default:

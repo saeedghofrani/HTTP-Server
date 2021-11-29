@@ -1,6 +1,7 @@
 let pageData = require('./readPage.js');
 try {
     const rootPage = pageData('../page/root/index.html');
+    const rootPageCss = pageData('../page/root/css/style.css')
     const json = pageData('../page/JSON/file.json');
     const notFound = pageData('../page/Not Found/404page.html');
     const notFoundCss = pageData('../page/Not Found/css/404style.css');
@@ -21,6 +22,7 @@ try {
     const userTableGUI = pageData('../page/user Table/js/GUI.js');
     module.exports = {
         rootPage,
+        rootPageCss,
         json,
         notFound,
         notFoundCss,

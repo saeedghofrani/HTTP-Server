@@ -2,7 +2,7 @@ const http = require('http');
 var url = require('url');
 const pageData = require('../Modules/pageData.js');
 const page = require('../Modules/pageHeader.js');
-
+const address = require('../Modules/address.js');
 
 let server = http.createServer((req, res) => {
     console.log(`request was made: ${req.url}`);
@@ -13,23 +13,23 @@ let server = http.createServer((req, res) => {
             case '/':
                 res.end(pageData.helloWebApplication);
                 break;
-            case '/css/style.css':
+            case address.StyleCss:
                 res.end(pageData.helloWorldCss);
                 break;
-            case '/about':
+            case address.about:
                 res.end(pageData.aboutMe);
                 break;
-            case '/content':
+            case address.content:
                 res.end(pageData.content);
                 break;
-            case '/helloWorld':
+            case address.helloWorld:
                 res.end(pageData.helloWorld);
                 break;
-            case '/me':
+            case address.saeed:
                 res.end(pageData.saeed);
                 break;
             //user put nothing in url//
-            case '/css/404style.css':
+            case address.style404:
                 res.end(pageData.notFoundCss);
                 break;
             default:
