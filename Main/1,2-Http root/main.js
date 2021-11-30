@@ -2,7 +2,7 @@
 const http = require('http');
 const url = require('url');
 const page = require('../../Modules/pageHeader.js');
-const addressDictionary = require('../../Modules/addressDictionary.js');
+const {root} = require('../../Modules/addressDictionary.js');
 //create server//
 let server = http.createServer((req, res) => {
     //log url request//
@@ -11,14 +11,12 @@ let server = http.createServer((req, res) => {
         //get user input// 
         const pathname = url.parse(req.url).pathname;
         //locate address in dictionary//
-        if (addressDictionary.hasOwnProperty(pathname))
-            res.end(addressDictionary[pathname]);
+        if (root.hasOwnProperty(pathname))
+            res.end(root[pathname]);
         else
-            res.end(addressDictionary['/notFound']);
+            res.end(root['/notFound']);
     }
 });
 server.listen(page.port, page.hostname, () => {
     console.log(`listening to port ${page.port}`);
 });
-
-
