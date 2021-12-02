@@ -1,5 +1,6 @@
 "use strict";
 const pageData = require('./readPage.js');
+const fs = require('fs');
 
 try {
     // dictionary contain addresses and page
@@ -34,6 +35,7 @@ try {
         '/user': pageData('../../page/user Table/index.html'),
         '/notFound': pageData('../../page/Not Found/404page.html'),
         '/css/404style.css': pageData('../../page/Not Found/css/404style.css'),
+        '/pictures/download.jpg': fs.readFileSync('../../page/user Table/pictures/download.jpg'),
     };
 
     module.exports = { root, helloWA, htmlWA, template };

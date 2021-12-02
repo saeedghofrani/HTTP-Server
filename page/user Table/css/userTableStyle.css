@@ -4,6 +4,10 @@
   box-sizing: border-box;
   /* overflow-x: hidden !important; */
 }
+img.imgLast {
+  width: 200px;
+  height: 200px;
+}
 *:focus,
 *:active {
   outline: none !important;
