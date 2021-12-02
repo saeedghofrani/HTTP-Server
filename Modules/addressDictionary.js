@@ -20,7 +20,7 @@ try {
         '/css/404style.css': pageData('../../page/Not Found/css/404style.css'),
     };
     const root = {
-        '/root': pageData('../../page/root/index.html'),
+        '/': pageData('../../page/root/index.html'),
         '/json': pageData('../../page/JSON/file.json'),
         '/css/style.css': pageData('../../page/root/css/style.css'),
         '/notFound': pageData('../../page/Not Found/404page.html'),
